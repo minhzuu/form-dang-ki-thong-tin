@@ -1,5 +1,5 @@
 function KiemTraTenDN() {
-    var re = /^[a-z]\w*/;
+    var re = /^[a-zA-Z]\w*/;
     if (re.test(document.getElementById('txtDN').value.trim()) == false) {
         tendn.innerText = "*bắt buộc, bắt đầu bằng ký tự";
         return false;
@@ -43,4 +43,15 @@ function SubmitForm() {
         return false;
     }
         return true;
+}
+function KiemTraSDT(){
+    var re = /^[0-9]\w*/;
+    if(re.test(document.getElementById('txtDT').value)==false){
+        dienthoai.innerText ="Phải là số";
+        return false;
+    }
+    else {
+        return true;
+    }
+
 }
